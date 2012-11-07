@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @person.name %>
+</p>
+
+<p>
+  <b>Secret:</b>
+  <%= @person.secret %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @person.country %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @person.email %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @person.description %>
+</p>
+
+<p>
+  <b>Can send email:</b>
+  <%= @person.can_send_email %>
+</p>
+
+<p>
+  <b>Graduation year:</b>
+  <%= @person.graduation_year %>
+</p>
+
+<p>
+  <b>Body temperature:</b>
+  <%= @person.body_temperature %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @person.price %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @person.birthday %>
+</p>
+
+<p>
+  <b>Favorite time:</b>
+  <%= @person.favorite_time %>
+</p>
+
+<p> 
+  <b>Photo:</b>
+    <% if @person.has_photo? %>
+      <%= image_tag @person.photo_path %>
+    <% else %>
+      No photo.
+    <% end %> 
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
